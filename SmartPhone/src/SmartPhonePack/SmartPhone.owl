@@ -1,0 +1,1231 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://localhost/smartphone#"
+     xml:base="http://localhost/smartphone"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:smartphone="http://localhost/smartphone#">
+    <owl:Ontology rdf:about="http://localhost/smartphone"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/smartphone#hasFronts -->
+
+    <owl:AnnotationProperty rdf:about="http://localhost/smartphone#hasFronts"/>
+    
+
+
+    <!-- http://localhost/smartphone#name -->
+
+    <owl:AnnotationProperty rdf:about="http://localhost/smartphone#name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/smartphone#hasCPU -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/smartphone#hasCPU">
+        <rdfs:subPropertyOf rdf:resource="http://localhost/smartphone#hasSmartPhoneParts"/>
+        <rdfs:domain rdf:resource="http://localhost/smartphone#SmartPhone"/>
+        <rdfs:range rdf:resource="http://localhost/smartphone#CPU"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/smartphone#hasCamera -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/smartphone#hasCamera">
+        <rdfs:subPropertyOf rdf:resource="http://localhost/smartphone#hasSmartPhoneParts"/>
+        <rdfs:domain rdf:resource="http://localhost/smartphone#SmartPhone"/>
+        <rdfs:range rdf:resource="http://localhost/smartphone#Smart_Phone_Camera"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/smartphone#hasDisplay -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/smartphone#hasDisplay">
+        <rdfs:subPropertyOf rdf:resource="http://localhost/smartphone#hasSmartPhoneParts"/>
+        <rdfs:domain rdf:resource="http://localhost/smartphone#SmartPhone"/>
+        <rdfs:range rdf:resource="http://localhost/smartphone#Smart_Phone_Display"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/smartphone#hasFrontCamera -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/smartphone#hasFrontCamera">
+        <rdfs:subPropertyOf rdf:resource="http://localhost/smartphone#hasCamera"/>
+        <rdfs:domain rdf:resource="http://localhost/smartphone#SmartPhone"/>
+        <rdfs:range rdf:resource="http://localhost/smartphone#Front_Camera"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/smartphone#hasOS -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/smartphone#hasOS">
+        <rdfs:subPropertyOf rdf:resource="http://localhost/smartphone#hasSmartPhoneParts"/>
+        <rdfs:domain rdf:resource="http://localhost/smartphone#SmartPhone"/>
+        <rdfs:range rdf:resource="http://localhost/smartphone#Smart_Phone_Os"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/smartphone#hasPrice -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/smartphone#hasPrice">
+        <rdfs:domain rdf:resource="http://localhost/smartphone#SmartPhone"/>
+        <rdfs:range rdf:resource="http://localhost/smartphone#Price"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/smartphone#hasRAM -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/smartphone#hasRAM">
+        <rdfs:subPropertyOf rdf:resource="http://localhost/smartphone#hasSmartPhoneParts"/>
+        <rdfs:domain rdf:resource="http://localhost/smartphone#SmartPhone"/>
+        <rdfs:range rdf:resource="http://localhost/smartphone#RAM"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/smartphone#hasROM -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/smartphone#hasROM">
+        <rdfs:subPropertyOf rdf:resource="http://localhost/smartphone#hasSmartPhoneParts"/>
+        <rdfs:domain rdf:resource="http://localhost/smartphone#SmartPhone"/>
+        <rdfs:range rdf:resource="http://localhost/smartphone#ROM"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/smartphone#hasRearCamera -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/smartphone#hasRearCamera">
+        <rdfs:subPropertyOf rdf:resource="http://localhost/smartphone#hasCamera"/>
+        <rdfs:domain rdf:resource="http://localhost/smartphone#SmartPhone"/>
+        <rdfs:range rdf:resource="http://localhost/smartphone#Rear_Camera"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/smartphone#hasSmartPhoneParts -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/smartphone#hasSmartPhoneParts">
+        <rdfs:domain rdf:resource="http://localhost/smartphone#SmartPhone"/>
+        <rdfs:range rdf:resource="http://localhost/smartphone#Computer_Parts"/>
+        <rdfs:range rdf:resource="http://localhost/smartphone#Smart_Phone_Parts"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/smartphone#Android -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Android">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#Smart_Phone_Os"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#Apple_Ax_Series -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Apple_Ax_Series">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#Moblie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#CPU -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#CPU">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#Computer_Parts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#Camera_Phone -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Camera_Phone">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#SmartPhone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#Communication_Device -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Communication_Device"/>
+    
+
+
+    <!-- http://localhost/smartphone#Computer_Parts -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Computer_Parts"/>
+    
+
+
+    <!-- http://localhost/smartphone#Exynos -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Exynos">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#Moblie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#Front_Camera -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Front_Camera">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#Smart_Phone_Camera"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#Gaming_Phone -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Gaming_Phone">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#SmartPhone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#General_Phone -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#General_Phone">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#SmartPhone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#IOS -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#IOS">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#Smart_Phone_Os"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#Kirin -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Kirin">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#Moblie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#Mediatek -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Mediatek">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#Moblie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#Moblie -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Moblie">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#CPU"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#Phablet -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Phablet">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#SmartPhone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#Price -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Price"/>
+    
+
+
+    <!-- http://localhost/smartphone#Qualcom_Snapdragon -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Qualcom_Snapdragon">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#Moblie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#RAM -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#RAM">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#Computer_Parts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#ROM -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#ROM">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#Smart_Phone_Parts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#Rear_Camera -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Rear_Camera">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#Smart_Phone_Camera"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#SmartPhone -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#SmartPhone">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#Communication_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#Smart_Phone_Camera -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Smart_Phone_Camera">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#Smart_Phone_Parts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#Smart_Phone_Display -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Smart_Phone_Display">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#Smart_Phone_Parts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#Smart_Phone_Os -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Smart_Phone_Os">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#Smart_Phone_Parts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#Smart_Phone_Parts -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Smart_Phone_Parts">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#Communication_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#Windowsphone -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#Windowsphone">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#Smart_Phone_Os"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/smartphone#PC_&amp;_NoteBook -->
+
+    <owl:Class rdf:about="http://localhost/smartphone#PC_&amp;_NoteBook">
+        <rdfs:subClassOf rdf:resource="http://localhost/smartphone#CPU"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/smartphone#A10 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#A10">
+        <rdf:type rdf:resource="http://localhost/smartphone#Apple_Ax_Series"/>
+        <name>A10</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#A11 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#A11">
+        <rdf:type rdf:resource="http://localhost/smartphone#Apple_Ax_Series"/>
+        <name>A11</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#A12 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#A12">
+        <rdf:type rdf:resource="http://localhost/smartphone#Apple_Ax_Series"/>
+        <name>A12</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Android_7.1.1 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Android_7.1.1">
+        <rdf:type rdf:resource="http://localhost/smartphone#Android"/>
+        <name>Android</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Android_8.0_Oreo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Android_8.0_Oreo">
+        <rdf:type rdf:resource="http://localhost/smartphone#Android"/>
+        <name>Android</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Android_8.1_Oreo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Android_8.1_Oreo">
+        <rdf:type rdf:resource="http://localhost/smartphone#Android"/>
+        <name>Android</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Exynos_7580_Octa_Core -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Exynos_7580_Octa_Core">
+        <rdf:type rdf:resource="http://localhost/smartphone#Exynos"/>
+        <name>Exynos</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Exynos_8895_Octa_Core -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Exynos_8895_Octa_Core">
+        <rdf:type rdf:resource="http://localhost/smartphone#Exynos"/>
+        <name>Exynos</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Exynos_9810_Octa_Core -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Exynos_9810_Octa_Core">
+        <rdf:type rdf:resource="http://localhost/smartphone#Exynos"/>
+        <name>Exynos</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Huawei_Mate_20_Pro -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Huawei_Mate_20_Pro">
+        <rdf:type rdf:resource="http://localhost/smartphone#Camera_Phone"/>
+        <hasCPU rdf:resource="http://localhost/smartphone#Kirin_980"/>
+        <hasDisplay rdf:resource="http://localhost/smartphone#OLED_6.39_inc"/>
+        <hasFrontCamera rdf:resource="http://localhost/smartphone#24MP"/>
+        <hasOS rdf:resource="http://localhost/smartphone#Android_8.1_Oreo"/>
+        <hasPrice rdf:resource="http://localhost/smartphone#31,900bath"/>
+        <hasRAM rdf:resource="http://localhost/smartphone#8GB"/>
+        <hasROM rdf:resource="http://localhost/smartphone#256GB"/>
+        <hasRearCamera rdf:resource="http://localhost/smartphone#40+20+8MP"/>
+        <hasFronts rdf:resource="http://localhost/smartphone#24MP"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Huawei Mate 20 Pro, Memory 256GB, Cpu Kirin 980, Camera 40+20+8 MP,  31,000 Bath</name>
+        <rdfs:label>Huawei_Mate_20_Pro</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#IOS_11 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#IOS_11">
+        <rdf:type rdf:resource="http://localhost/smartphone#IOS"/>
+        <name>IOS</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#IOS_12 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#IOS_12">
+        <rdf:type rdf:resource="http://localhost/smartphone#IOS"/>
+        <name>IOS</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#IOS_13 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#IOS_13">
+        <rdf:type rdf:resource="http://localhost/smartphone#IOS"/>
+        <name>IOS</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#IPS-LCD_24-bit_5.99_inc -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#IPS-LCD_24-bit_5.99_inc">
+        <rdf:type rdf:resource="http://localhost/smartphone#Smart_Phone_Display"/>
+        <name>5INC</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#IPS_LCD_Full_Display_6.3_inc -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#IPS_LCD_Full_Display_6.3_inc">
+        <rdf:type rdf:resource="http://localhost/smartphone#Smart_Phone_Display"/>
+        <name>6INC</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Kirin_970 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Kirin_970">
+        <rdf:type rdf:resource="http://localhost/smartphone#Kirin"/>
+        <name>Kirin</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Kirin_980 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Kirin_980">
+        <rdf:type rdf:resource="http://localhost/smartphone#Kirin"/>
+        <name>Kirin</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Krin_710 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Krin_710">
+        <rdf:type rdf:resource="http://localhost/smartphone#Kirin"/>
+        <name>Kirin</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#LCD_6.23_inc -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#LCD_6.23_inc">
+        <rdf:type rdf:resource="http://localhost/smartphone#Smart_Phone_Display"/>
+        <name>6INC</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Liquid_Retina_HD_6.1_inc -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Liquid_Retina_HD_6.1_inc">
+        <rdf:type rdf:resource="http://localhost/smartphone#Smart_Phone_Display"/>
+        <rdfs:comment>6INC</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#MediaTek_P60_8_core -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#MediaTek_P60_8_core">
+        <rdf:type rdf:resource="http://localhost/smartphone#Mediatek"/>
+        <name>Mediatek</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Multi-touch_whitescreen_LCD_4.7_inc -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Multi-touch_whitescreen_LCD_4.7_inc">
+        <rdf:type rdf:resource="http://localhost/smartphone#Smart_Phone_Display"/>
+        <name>4INC</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Multi-touch_whitescreen_LCD_5.5_inc -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Multi-touch_whitescreen_LCD_5.5_inc">
+        <rdf:type rdf:resource="http://localhost/smartphone#Smart_Phone_Display"/>
+        <name>5INC</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#OLED_6.39_inc -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#OLED_6.39_inc">
+        <rdf:type rdf:resource="http://localhost/smartphone#Smart_Phone_Display"/>
+        <name>6INC</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Oppo_F7 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Oppo_F7">
+        <rdf:type rdf:resource="http://localhost/smartphone#Camera_Phone"/>
+        <hasCPU rdf:resource="http://localhost/smartphone#MediaTek_P60_8_core"/>
+        <hasDisplay rdf:resource="http://localhost/smartphone#LCD_6.23_inc"/>
+        <hasFrontCamera rdf:resource="http://localhost/smartphone#25MP"/>
+        <hasOS rdf:resource="http://localhost/smartphone#Android_8.1_Oreo"/>
+        <hasPrice rdf:resource="http://localhost/smartphone#8,900bath"/>
+        <hasRAM rdf:resource="http://localhost/smartphone#4GB"/>
+        <hasROM rdf:resource="http://localhost/smartphone#128GB"/>
+        <hasRearCamera rdf:resource="http://localhost/smartphone#16MP"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Oppo F7,  Memory 128GB,  Cpu MediaTek P60 8 Core, Camera 25MP, 8,900 Bath</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Qualcomm_Snapdragon_626_Octa-core_2.2_GHz -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Qualcomm_Snapdragon_626_Octa-core_2.2_GHz">
+        <rdf:type rdf:resource="http://localhost/smartphone#Qualcom_Snapdragon"/>
+        <name>Qualcom</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Qualcomm_Snapdragon_660 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Qualcomm_Snapdragon_660">
+        <rdf:type rdf:resource="http://localhost/smartphone#Qualcom_Snapdragon"/>
+        <name>Qualcom</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Qualcomm_Snapdragon_845_Octa_Core -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Qualcomm_Snapdragon_845_Octa_Core">
+        <rdf:type rdf:resource="http://localhost/smartphone#Qualcom_Snapdragon"/>
+        <name>Qualcom</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Retina_HD_4.7_inc -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Retina_HD_4.7_inc">
+        <rdf:type rdf:resource="http://localhost/smartphone#Smart_Phone_Display"/>
+        <name>4INC</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Samsum_Galaxy_S9 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Samsum_Galaxy_S9">
+        <rdf:type rdf:resource="http://localhost/smartphone#Phablet"/>
+        <hasCPU rdf:resource="http://localhost/smartphone#Exynos_9810_Octa_Core"/>
+        <hasDisplay rdf:resource="http://localhost/smartphone#Super_Retina_HD_5.8_inc"/>
+        <hasFrontCamera rdf:resource="http://localhost/smartphone#8MP"/>
+        <hasOS rdf:resource="http://localhost/smartphone#Android_8.1_Oreo"/>
+        <hasPrice rdf:resource="http://localhost/smartphone#27,900bath"/>
+        <hasRAM rdf:resource="http://localhost/smartphone#4GB"/>
+        <hasROM rdf:resource="http://localhost/smartphone#64GB"/>
+        <hasRearCamera rdf:resource="http://localhost/smartphone#12MP"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Samsung Galaxy S9, Memory 64 GB, Cpu Exynos 9810 Octa Core, Camera 12 MP, 27,900 Bath</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Samsung_Galaxy_A9 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Samsung_Galaxy_A9">
+        <rdf:type rdf:resource="http://localhost/smartphone#General_Phone"/>
+        <hasCPU rdf:resource="http://localhost/smartphone#Android_8.0_Oreo"/>
+        <hasCPU rdf:resource="http://localhost/smartphone#Qualcomm_Snapdragon_660"/>
+        <hasDisplay rdf:resource="http://localhost/smartphone#Super_AMOLED_24-bit_6.3_inc"/>
+        <hasFrontCamera rdf:resource="http://localhost/smartphone#24MP"/>
+        <hasPrice rdf:resource="http://localhost/smartphone#19,900bath"/>
+        <hasRAM rdf:resource="http://localhost/smartphone#6GB"/>
+        <hasROM rdf:resource="http://localhost/smartphone#128GB"/>
+        <hasRearCamera rdf:resource="http://localhost/smartphone#24MP"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Samsung Galaxy A9, Memory 128 GB, Cpu Qualcomm Snapdragon 660, Camera 24 MP, 19,900 Bath</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Samsung_Galaxy_J7 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Samsung_Galaxy_J7">
+        <rdf:type rdf:resource="http://localhost/smartphone#General_Phone"/>
+        <hasCPU rdf:resource="http://localhost/smartphone#Exynos_7580_Octa_Core"/>
+        <hasDisplay rdf:resource="http://localhost/smartphone#Super_Retina_HD_5.8_inc"/>
+        <hasFrontCamera rdf:resource="http://localhost/smartphone#5MP"/>
+        <hasOS rdf:resource="http://localhost/smartphone#Android_7.1.1"/>
+        <hasPrice rdf:resource="http://localhost/smartphone#7,500bath"/>
+        <hasRAM rdf:resource="http://localhost/smartphone#2GB"/>
+        <hasROM rdf:resource="http://localhost/smartphone#32GB"/>
+        <hasRearCamera rdf:resource="http://localhost/smartphone#12MP"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Samsung Galaxy J7, Memory 32 GB, Exynos 7580 Octa Core, Camera 12 MP, 7,500 Bath</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Samsung_Galaxy_Note8 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Samsung_Galaxy_Note8">
+        <rdf:type rdf:resource="http://localhost/smartphone#Phablet"/>
+        <hasCPU rdf:resource="http://localhost/smartphone#Exynos_8895_Octa_Core"/>
+        <hasDisplay rdf:resource="http://localhost/smartphone#Super_AMOLED_24-bit_6.3_inc"/>
+        <hasFrontCamera rdf:resource="http://localhost/smartphone#8MP"/>
+        <hasOS rdf:resource="http://localhost/smartphone#Android_7.1.1"/>
+        <hasPrice rdf:resource="http://localhost/smartphone#28,900bath"/>
+        <hasRAM rdf:resource="http://localhost/smartphone#6GB"/>
+        <hasROM rdf:resource="http://localhost/smartphone#64GB"/>
+        <hasRearCamera rdf:resource="http://localhost/smartphone#12MP"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Samsung Galaxy Note 8, Memory 64 GB, Cpu Exynos 8895 Octa Core, Camera 12 MP, 28,900 Bath</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Samsung_Galaxy_Note9 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Samsung_Galaxy_Note9">
+        <rdf:type rdf:resource="http://localhost/smartphone#Phablet"/>
+        <hasCPU rdf:resource="http://localhost/smartphone#Exynos_9810_Octa_Core"/>
+        <hasDisplay rdf:resource="http://localhost/smartphone#Super_AMOLED_6.4_inc"/>
+        <hasFrontCamera rdf:resource="http://localhost/smartphone#8MP"/>
+        <hasOS rdf:resource="http://localhost/smartphone#Android_8.1_Oreo"/>
+        <hasPrice rdf:resource="http://localhost/smartphone#33,900bath"/>
+        <hasRAM rdf:resource="http://localhost/smartphone#6GB"/>
+        <hasROM rdf:resource="http://localhost/smartphone#128GB"/>
+        <hasRearCamera rdf:resource="http://localhost/smartphone#12MP"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Samsung Galaxy Note 9, Memory 128 GB, Cpu Exynos 9810 Octa Core, Camera 12 MP, 33,900 Bath</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Super_AMOLED_24-bit_6.3_inc -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Super_AMOLED_24-bit_6.3_inc">
+        <rdf:type rdf:resource="http://localhost/smartphone#Smart_Phone_Display"/>
+        <name>6INC</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Super_AMOLED_6.4_inc -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Super_AMOLED_6.4_inc">
+        <rdf:type rdf:resource="http://localhost/smartphone#Smart_Phone_Display"/>
+        <name>6INC</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Super_Retina_HD_5.8_inc -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Super_Retina_HD_5.8_inc">
+        <rdf:type rdf:resource="http://localhost/smartphone#Smart_Phone_Display"/>
+        <name>5INC</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Super_Retina_HD_6.5_inc -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Super_Retina_HD_6.5_inc">
+        <rdf:type rdf:resource="http://localhost/smartphone#Smart_Phone_Display"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Vivo_V9 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Vivo_V9">
+        <rdf:type rdf:resource="http://localhost/smartphone#Camera_Phone"/>
+        <hasCPU rdf:resource="http://localhost/smartphone#Qualcomm_Snapdragon_626_Octa-core_2.2_GHz"/>
+        <hasDisplay rdf:resource="http://localhost/smartphone#IPS_LCD_Full_Display_6.3_inc"/>
+        <hasFrontCamera rdf:resource="http://localhost/smartphone#24MP"/>
+        <hasOS rdf:resource="http://localhost/smartphone#Android_8.1_Oreo"/>
+        <hasPrice rdf:resource="http://localhost/smartphone#7,900bath"/>
+        <hasRAM rdf:resource="http://localhost/smartphone#4GB"/>
+        <hasROM rdf:resource="http://localhost/smartphone#64GB"/>
+        <hasRearCamera rdf:resource="http://localhost/smartphone#16+5MP"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Vivo V9, Memory 64 GB, Cpu Qualcomm Snapdragon 626 OctaCore, Camera 24 MP, 7,900 Bath</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Windows_10 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Windows_10">
+        <rdf:type rdf:resource="http://localhost/smartphone#Windowsphone"/>
+        <name>Windows</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Windows_8 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Windows_8">
+        <rdf:type rdf:resource="http://localhost/smartphone#Windowsphone"/>
+        <name>Windows</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Xiaomi_Black_Shark -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Xiaomi_Black_Shark">
+        <rdf:type rdf:resource="http://localhost/smartphone#Gaming_Phone"/>
+        <hasCPU rdf:resource="http://localhost/smartphone#Qualcomm_Snapdragon_845_Octa_Core"/>
+        <hasDisplay rdf:resource="http://localhost/smartphone#IPS-LCD_24-bit_5.99_inc"/>
+        <hasFrontCamera rdf:resource="http://localhost/smartphone#20MP"/>
+        <hasOS rdf:resource="http://localhost/smartphone#Android_8.0_Oreo"/>
+        <hasPrice rdf:resource="http://localhost/smartphone#19,900bath"/>
+        <hasRAM rdf:resource="http://localhost/smartphone#10GB"/>
+        <hasROM rdf:resource="http://localhost/smartphone#64GB"/>
+        <hasRearCamera rdf:resource="http://localhost/smartphone#12+20MP"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Xiaomi Back Shark, Memory 64 GB, Cpu Qualcomm Snapdragon 845 OctaCore, Camera 20 MP, 19,900 Bath</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#iPhone8_Plus -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#iPhone8_Plus">
+        <rdf:type rdf:resource="http://localhost/smartphone#General_Phone"/>
+        <hasCPU rdf:resource="http://localhost/smartphone#A11"/>
+        <hasCamera rdf:resource="http://localhost/smartphone#12MP"/>
+        <hasCamera rdf:resource="http://localhost/smartphone#7MP"/>
+        <hasDisplay rdf:resource="http://localhost/smartphone#Multi-touch_whitescreen_LCD_5.5_inc"/>
+        <hasOS rdf:resource="http://localhost/smartphone#IOS_12"/>
+        <hasPrice rdf:resource="http://localhost/smartphone#27,900bath"/>
+        <hasRAM rdf:resource="http://localhost/smartphone#3GB"/>
+        <hasROM rdf:resource="http://localhost/smartphone#256GB"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">iPhone 8 Plus, Memory 256 GB, Cpu A11, Camera 12 MP, 27,900 Bath</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#iPhone_6s -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#iPhone_6s">
+        <rdf:type rdf:resource="http://localhost/smartphone#General_Phone"/>
+        <hasCPU rdf:resource="http://localhost/smartphone#A10"/>
+        <hasDisplay rdf:resource="http://localhost/smartphone#Retina_HD_4.7_inc"/>
+        <hasFrontCamera rdf:resource="http://localhost/smartphone#5MP"/>
+        <hasOS rdf:resource="http://localhost/smartphone#IOS_11"/>
+        <hasPrice rdf:resource="http://localhost/smartphone#18,000bath"/>
+        <hasRAM rdf:resource="http://localhost/smartphone#2GB"/>
+        <hasROM rdf:resource="http://localhost/smartphone#32GB"/>
+        <hasRearCamera rdf:resource="http://localhost/smartphone#12MP"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">iPhone 6 s, Memory 32 GB, Cpu A10, Camera 12 MP, 18,000 Bath</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#iPhone_8 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#iPhone_8">
+        <rdf:type rdf:resource="http://localhost/smartphone#General_Phone"/>
+        <hasCPU rdf:resource="http://localhost/smartphone#A11"/>
+        <hasDisplay rdf:resource="http://localhost/smartphone#Retina_HD_4.7_inc"/>
+        <hasFrontCamera rdf:resource="http://localhost/smartphone#7MP"/>
+        <hasOS rdf:resource="http://localhost/smartphone#IOS_12"/>
+        <hasPrice rdf:resource="http://localhost/smartphone#23,900bath"/>
+        <hasRAM rdf:resource="http://localhost/smartphone#2GB"/>
+        <hasROM rdf:resource="http://localhost/smartphone#256GB"/>
+        <hasRearCamera rdf:resource="http://localhost/smartphone#12MP"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">iPhone 8, Memory 256 GB, Cpu A11, Camera 12 MP, 23,900 Bath</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#iPhone_XS -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#iPhone_XS">
+        <rdf:type rdf:resource="http://localhost/smartphone#Gaming_Phone"/>
+        <hasCPU rdf:resource="http://localhost/smartphone#A12"/>
+        <hasDisplay rdf:resource="http://localhost/smartphone#Super_Retina_HD_5.8_inc"/>
+        <hasFrontCamera rdf:resource="http://localhost/smartphone#7MP"/>
+        <hasOS rdf:resource="http://localhost/smartphone#IOS_12"/>
+        <hasPrice rdf:resource="http://localhost/smartphone#39,900bath"/>
+        <hasRAM rdf:resource="http://localhost/smartphone#3GB"/>
+        <hasROM rdf:resource="http://localhost/smartphone#256GB"/>
+        <hasRearCamera rdf:resource="http://localhost/smartphone#12MP"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">iPhone XS, Memory 256 GB, Cpu A12, Camera 12 MP, 39,900 Bath</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#iPhone_XS_Max -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#iPhone_XS_Max">
+        <rdf:type rdf:resource="http://localhost/smartphone#Gaming_Phone"/>
+        <hasCPU rdf:resource="http://localhost/smartphone#A12"/>
+        <hasDisplay rdf:resource="http://localhost/smartphone#Super_Retina_HD_6.5_inc"/>
+        <hasFrontCamera rdf:resource="http://localhost/smartphone#7MP"/>
+        <hasOS rdf:resource="http://localhost/smartphone#IOS_12"/>
+        <hasPrice rdf:resource="http://localhost/smartphone#49,900bath"/>
+        <hasRAM rdf:resource="http://localhost/smartphone#3GB"/>
+        <hasROM rdf:resource="http://localhost/smartphone#256GB"/>
+        <hasRearCamera rdf:resource="http://localhost/smartphone#12MP"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">iPhone XS MAX , Memory 256 GB, Cpu A12, Camera 12 MP, 49,900 Bath</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#10GB -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#10GB">
+        <rdf:type rdf:resource="http://localhost/smartphone#RAM"/>
+        <name>8GB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#12MP -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#12MP">
+        <rdf:type rdf:resource="http://localhost/smartphone#Rear_Camera"/>
+        <name>10MP</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#12+20MP -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#12+20MP">
+        <rdf:type rdf:resource="http://localhost/smartphone#Rear_Camera"/>
+        <name>20MP</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#128GB -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#128GB">
+        <rdf:type rdf:resource="http://localhost/smartphone#ROM"/>
+        <name>128GB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#16MP -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#16MP">
+        <rdf:type rdf:resource="http://localhost/smartphone#Rear_Camera"/>
+        <name>15MP</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#16+5MP -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#16+5MP">
+        <rdf:type rdf:resource="http://localhost/smartphone#Rear_Camera"/>
+        <name>15MP</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#18,000bath -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#18,000bath">
+        <rdf:type rdf:resource="http://localhost/smartphone#Price"/>
+        <name>10-20KB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#19,900bath -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#19,900bath">
+        <rdf:type rdf:resource="http://localhost/smartphone#Price"/>
+        <name>10-20KB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#2GB -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#2GB">
+        <rdf:type rdf:resource="http://localhost/smartphone#RAM"/>
+        <name>2GB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#20MP -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#20MP">
+        <rdf:type rdf:resource="http://localhost/smartphone#Front_Camera"/>
+        <name>20MP</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#23,900bath -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#23,900bath">
+        <rdf:type rdf:resource="http://localhost/smartphone#Price"/>
+        <name>20-30KB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#24MP -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#24MP">
+        <rdf:type rdf:resource="http://localhost/smartphone#Front_Camera"/>
+        <name>20MP</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#25MP -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#25MP">
+        <rdf:type rdf:resource="http://localhost/smartphone#Front_Camera"/>
+        <name>20MP</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#256GB -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#256GB">
+        <rdf:type rdf:resource="http://localhost/smartphone#ROM"/>
+        <name>256GB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#27,900bath -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#27,900bath">
+        <rdf:type rdf:resource="http://localhost/smartphone#Price"/>
+        <name>20-30KB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#28,900bath -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#28,900bath">
+        <rdf:type rdf:resource="http://localhost/smartphone#Price"/>
+        <name>20-30KB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#3GB -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#3GB">
+        <rdf:type rdf:resource="http://localhost/smartphone#RAM"/>
+        <name>3GB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#31,900bath -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#31,900bath">
+        <rdf:type rdf:resource="http://localhost/smartphone#Price"/>
+        <name>30KB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#32GB -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#32GB">
+        <rdf:type rdf:resource="http://localhost/smartphone#ROM"/>
+        <name>32GB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#33,900bath -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#33,900bath">
+        <rdf:type rdf:resource="http://localhost/smartphone#Price"/>
+        <name>30KB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#39,900bath -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#39,900bath">
+        <rdf:type rdf:resource="http://localhost/smartphone#Price"/>
+        <name>30KB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#4GB -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#4GB">
+        <rdf:type rdf:resource="http://localhost/smartphone#RAM"/>
+        <name>4GB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#40+20+8MP -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#40+20+8MP">
+        <rdf:type rdf:resource="http://localhost/smartphone#Rear_Camera"/>
+        <name>20MP</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#49,900bath -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#49,900bath">
+        <rdf:type rdf:resource="http://localhost/smartphone#Price"/>
+        <name>30KB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#5MP -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#5MP">
+        <rdf:type rdf:resource="http://localhost/smartphone#Front_Camera"/>
+        <name>5MP</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#6GB -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#6GB">
+        <rdf:type rdf:resource="http://localhost/smartphone#RAM"/>
+        <name>6GB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#64GB -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#64GB">
+        <rdf:type rdf:resource="http://localhost/smartphone#ROM"/>
+        <name>64GB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#7MP -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#7MP">
+        <rdf:type rdf:resource="http://localhost/smartphone#Front_Camera"/>
+        <name>5MP</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#7,500bath -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#7,500bath">
+        <rdf:type rdf:resource="http://localhost/smartphone#Price"/>
+        <name>0-10KB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#7,900bath -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#7,900bath">
+        <rdf:type rdf:resource="http://localhost/smartphone#Price"/>
+        <name>0-10KB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#8GB -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#8GB">
+        <rdf:type rdf:resource="http://localhost/smartphone#RAM"/>
+        <name>8GB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#8MP -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#8MP">
+        <rdf:type rdf:resource="http://localhost/smartphone#Front_Camera"/>
+        <name>5MP</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#8,900bath -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#8,900bath">
+        <rdf:type rdf:resource="http://localhost/smartphone#Price"/>
+        <name>0-10KB</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/smartphone#Samsung_Galaxy_S9+ -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/smartphone#Samsung_Galaxy_S9+">
+        <rdf:type rdf:resource="http://localhost/smartphone#Phablet"/>
+        <hasCPU rdf:resource="http://localhost/smartphone#Exynos_9810_Octa_Core"/>
+        <hasDisplay rdf:resource="http://localhost/smartphone#Super_AMOLED_24-bit_6.3_inc"/>
+        <hasFrontCamera rdf:resource="http://localhost/smartphone#8MP"/>
+        <hasOS rdf:resource="http://localhost/smartphone#Android_8.1_Oreo"/>
+        <hasPrice rdf:resource="http://localhost/smartphone#31,900bath"/>
+        <hasRAM rdf:resource="http://localhost/smartphone#4GB"/>
+        <hasROM rdf:resource="http://localhost/smartphone#64GB"/>
+        <hasRearCamera rdf:resource="http://localhost/smartphone#12MP"/>
+        <name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Samsung Galaxy S9+, Memory 64 GB, Cpu Exynos 9810 Octa Core, Camera 12 MP, 31,900 Bath</name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
