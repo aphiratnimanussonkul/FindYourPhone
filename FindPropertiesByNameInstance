@@ -1,0 +1,292 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package dogs;
+
+import com.hp.hpl.jena.query.QuerySolution;
+import com.hp.hpl.jena.rdf.model.RDFNode;
+import static edu.stanford.smi.protegex.owl.swrl.util.P3OWLUtil.getClass;
+import java.awt.Image;
+import java.io.File;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.WindowConstants;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import static jdk.nashorn.internal.objects.NativeDebug.getClass;
+
+/**
+ *
+ * @author CIG
+ */
+public class ShowResuit extends javax.swing.JFrame {
+
+    int i = 0;
+    String[] DOG = new String[999];
+    static String toyName;
+    static String workName;
+    static String sportName;
+    public ArrayList<String> ListComponent = new ArrayList<String>();  // for name list
+    public ArrayList<String> ListNames = new ArrayList<String>();  // for name list
+    String[] dogName = new String[9999];
+    
+    ShowImage si = new ShowImage();
+
+    public void setNullDogName() {
+        for (int j = 0; j < this.DOG.length; j++) {
+            this.DOG[j] = null;
+        }
+    }
+
+    /**
+     * Creates new form ShowResuit
+     */
+    public ShowResuit() {
+//        ShowResuit.toyName = "Shih-Tzu";
+        int i = 0;
+        initComponents();
+        setNullDogName();
+//        System.out.println(ShowResult.toyName);
+//        System.out.println(ShowResult.workName);
+//        System.out.println(ShowResult.sportName);
+        try {
+            System.out.println("Get Component");
+            String queryString;
+            queryString = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
+                    + "PREFIX owl: <http://www.w3.org/2002/07/owl#>"
+                    + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"
+                    + "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>"
+                    + "PREFIX ex: <http://www.dog.org#>\n"
+                    + "SELECT (str(?x) as ?Dog) (str(?size) as ?Size) (str(?fur) as ?Fur) (str(?strength) as ?Strength) (str(?color) as ?Color) (str(?eye) as ?Eye) (str(?ears) as ?Ears) (str(?tail) as ?Tail) (str(?location) as ?Location) (str(?habit) as ?Habit)"
+                    + "	WHERE {  ?x ex:name \"" + ShowResuit.toyName + "\"^^<http://www.w3.org/2000/01/rdf-schema#Literal>;"
+                    + "ex:hasSize ?size;"
+                    + "ex:hasFur ?fur;"
+                    + "ex:hasStrength ?strength;"
+                    + "ex:hasColor ?color;"
+                    + "ex:hasEye ?eye;"
+                    + "ex:hasEars ?ears;"
+                    + "ex:hasTail ?tail;"
+                    + "ex:hasLocation ?location;"
+                    + "ex:hasHabit ?habit."
+                    + "}";
+            System.out.println(queryString);
+            com.hp.hpl.jena.query.ResultSet results = OpenOWL.ExecSparQl(queryString);
+
+            while (results.hasNext()) {
+                System.out.println("Do");
+                QuerySolution soln = results.nextSolution();
+                
+                String dogName = soln.getLiteral("Dog").getString();
+                String size = soln.getLiteral("Size").getString();
+                String fur = soln.getLiteral("Fur").getString();
+                String strength = soln.getLiteral("Strength").getString();
+                String color = soln.getLiteral("Color").getString();
+                String eye = soln.getLiteral("Eye").getString();
+                String ears = soln.getLiteral("Ears").getString();
+                String tail = soln.getLiteral("Tail").getString();
+                String location = soln.getLiteral("Location").getString();
+                String habit = soln.getLiteral("Habit").getString();
+
+                //GetText
+                int start, stop;
+                start = dogName.toString().indexOf("#") + 1;
+                stop = dogName.toString().length();
+                String dogNames = dogName.toString().substring(start, stop);
+                this.DOG[i++] = dogNames;
+
+                start = size.toString().indexOf("#") + 1;
+                stop = size.toString().length();
+                String sizes = size.toString().substring(start, stop);
+                
+                start = fur.toString().indexOf("#") + 1;
+                stop = fur.toString().length();
+                String furs = fur.toString().substring(start, stop);
+                
+                start = strength.toString().indexOf("#") + 1;
+                stop = strength.toString().length();
+                String strengths = strength.toString().substring(start, stop);
+                
+                start = color.toString().indexOf("#") + 1;
+                stop = color.toString().length();
+                String colors = color.toString().substring(start, stop);
+                
+                start = eye.toString().indexOf("#") + 1;
+                stop = eye.toString().length();
+                String eyes = eye.toString().substring(start, stop);
+                
+                start = ears.toString().indexOf("#") + 1;
+                stop = ears.toString().length();
+                String earss = ears.toString().substring(start, stop);
+
+                start = tail.toString().indexOf("#") + 1;
+                stop = tail.toString().length();
+                String tails = tail.toString().substring(start, stop);
+                
+                start = location.toString().indexOf("#") + 1;
+                stop = location.toString().length();
+                String locations = location.toString().substring(start, stop);
+                
+                start = habit.toString().indexOf("#") + 1;
+                stop = habit.toString().length();
+                String habits = habit.toString().substring(start, stop);
+                
+                
+
+                RDFNode Dog = soln.get("Dog");
+                RDFNode Size = soln.get("Size");
+                RDFNode Fur = soln.get("Fur");
+                RDFNode Strength = soln.get("Strength");
+                RDFNode Color = soln.get("Color");
+                RDFNode Eye = soln.get("Eye");
+                RDFNode Ears = soln.get("Ears");
+                RDFNode Tail = soln.get("Tail");
+                RDFNode Location = soln.get("Location");
+                RDFNode Habit = soln.get("Habit");
+                
+
+                System.out.println(dogName.toString());
+                System.out.println(tail.toString());
+                System.out.println("Do");
+                DefaultTableModel aModel = (DefaultTableModel) jTable1.getModel();
+                aModel.addRow(new Object[]{dogNames, sizes, furs, strengths, colors, eyes, earss, tails, locations, habits});
+                jTable1.setModel(aModel);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Dog Breed", "Size", "Fur", "Strength", "Color", "Color eyes", "Ears", "Tail", "Location", "Habit"
+            }
+        ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 1080, 250));
+
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\CIG\\Documents\\NetBeansProjects\\dog\\src\\dogs\\ปุ่มback.png")); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 610, 120, 60));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\CIG\\Documents\\NetBeansProjects\\dog\\src\\dogs\\backDog.png")); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        pack();
+    }// </editor-fold>                        
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+        new dog().setVisible(true);
+        dispose();
+        
+    }                                        
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {                                     
+        // TODO add your handling code here:
+        int index = jTable1.getSelectedRow();
+        System.out.println("index = " + index);
+        TableModel model = jTable1.getModel();
+        
+        System.out.println("Dog Name = " + this.DOG[index] );
+        si.setVisible(true);
+        si.pack();
+        si.setLocationRelativeTo(null);
+        si.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        
+        ImageIcon icon = new ImageIcon(getClass().getResource(this.DOG[index] +".png"));
+        Image img = icon.getImage().getScaledInstance(si.lableImage.getWidth(), si.lableImage.getHeight(), Image.SCALE_SMOOTH);
+        si.lableImage.setIcon(new ImageIcon(img));
+       
+    }                                    
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(ShowResuit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(ShowResuit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(ShowResuit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(ShowResuit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new ShowResuit().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    // End of variables declaration                   
+}
